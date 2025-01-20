@@ -10,10 +10,10 @@ The repository has the following structure:
 .
 └── bedrock
     └── promptrouting
-        └── promptrouting.py
+        └── prompt_routing.ipynb
 ```
 
-- `bedrock/promptrouting/promptrouting.py`: The main Python script that interacts with the Bedrock Runtime API.
+- `bedrock/promptrouting/prompt_routing.ipynb`: The main Jupyter Notebook that interacts with the Bedrock Runtime API.
 
 ## Usage Instructions
 
@@ -48,27 +48,22 @@ The repository has the following structure:
    cd bedrock/promptrouting
    ```
 
-2. Run the script:
-   ```
-   python promptrouting.py
-   ```
+2. Open the notebook and run block by block.
+
 
 3. The script will send a predefined user message to the Bedrock Runtime API and print the response.
 
 ### Customization
 
-To change the user prompt, modify the `user_message` variable in the `promptrouting.py` file:
+To change the user prompt, modify the `prompt,prompt_complejo,prompt_1 and prompt_2` variables in the `promptrouting.ipynb` file:
 
-```python
-user_message = "Your custom prompt here"
-```
 
 ## Data Flow
 
 1. The script initializes an AWS session and creates a Bedrock Runtime client.
 2. A user message is defined and formatted into a message object.
-3. The script calls the `converse_stream()` method of the Bedrock Runtime API with the message object.
-4. The API processes the prompt using the specified model (Anthropic Claude).
+3. The script calls the `invoke_model()` method of the Bedrock Runtime API with the message object.
+4. The API processes the prompt using the specified model.
 5. The script receives the streaming response and prints the generated text.
 6. If available, metadata including trace information is printed.
 
@@ -133,10 +128,10 @@ El repositorio tiene la siguiente estructura:
 .
 └── bedrock
     └── promptrouting
-        └── promptrouting.py
+        └── prompt_routing.ipynb
 ```
 
-- `bedrock/promptrouting/promptrouting.py`: El script principal de Python que interactúa con la API de Bedrock Runtime.
+- `bedrock/promptrouting/prompt_routing.ipynb`: El Jupyter Notebook que interactúa con la API de Bedrock Runtime.
 
 ## Instrucciones de Uso
 
@@ -171,27 +166,22 @@ El repositorio tiene la siguiente estructura:
    cd bedrock/promptrouting
    ```
 
-2. Ejecute el script:
-   ```
-   python promptrouting.py
-   ```
+2. Abre el notebook y ejecuta bloque por bloque de código
+
 
 3. El script enviará un mensaje de usuario predefinido a la API de Bedrock Runtime e imprimirá la respuesta.
 
 ### Personalización
 
-Para cambiar el prompt del usuario, modifique la variable `user_message` en el archivo `promptrouting.py`:
+Para cambiar el prompt del usuario, modifique la variable `prompt,prompt_complejo,promot_!,prompt_2` en el archivo `prompt_routing.ipynb`:
 
-```python
-user_message = "Su prompt personalizado aquí"
-```
 
 ## Flujo de Datos
 
 1. El script inicializa una sesión de AWS y crea un cliente de Bedrock Runtime.
 2. Se define un mensaje de usuario y se formatea en un objeto de mensaje.
-3. El script llama al método `converse_stream()` de la API de Bedrock Runtime con el objeto de mensaje.
-4. La API procesa el prompt utilizando el modelo especificado (Anthropic Claude).
+3. El script llama al método `invoke_model()` de la API de Bedrock Runtime con el objeto de mensaje.
+4. La API procesa el prompt utilizando el modelo especificado.
 5. El script recibe la respuesta en streaming e imprime el texto generado.
 6. Si está disponible, se imprime la metadata, incluyendo información de trazado.
 
